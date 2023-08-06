@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>navbar with js with scroll</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<!-- <style>
+    /* * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      
+    }
+    body {
+        overflow-x: hidden;
+    }
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+    ul {
+        list-style: none;
+    }
+  
+    .header {
+        background-color: blueviolet;
+        padding: 15px 0;
+        font-family: sans-serif;
+        text-transform: uppercase;
+    }
+    .header .container {
+        width: 1140px;
+        padding: 0 15px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .header .logo {
+        font-size: 30px;
+        font-weight: 900;
+        color: white;
+    }
+    .header nav li {
+        display: inline-block;
+        margin-left: 30px;
+    }
+    .header li a {
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        transition: color 0.2s linear;
+    }
+    .header li a:hover {
+        color: gold;
+    }
+    .header .nav-toggler {
+        width: 34px;
+        height: 34px;
+        background-color: wheat;
+        display: none;
+    } */
+
+</style> -->
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="wrapper">
+                <a href="#" class="logo">
+                    logo
+                </a>
+                <button class="nav-toggler">
+                    <span></span>
+                </button>
+                <nav>
+                    <ul>
+                        <li><a href="#" class="nav-link">home</a></li>
+                        <li><a href="#" class="nav-link">about</a></li>
+                        <li><a href="#" class="nav-link">service</a></li>
+                        <li><a href="#" class="nav-link">blog</a></li>
+                        <li><a href="#" class="nav-link">contant</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+<div style="height: 500vh;"></div>
+<script>
+
+let navBtn = document.querySelector('.nav-toggler');
+let navbar = document.querySelector('nav');
+
+navBtn.onclick = () =>{
+    navbar.classList.toggle('active');
+}
+
+
+
+
+
+let navlink = document.querySelectorAll('.nav-link');
+let navBar = document.querySelector('nav');
+navlink.forEach(function(a){
+    a.addEventListener('click',function(){
+        navBar.classList.remove('active');
+    })
+})
+
+//  //////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+///////////////////////////////////////////////////////
+let nav = document.querySelector('.header');
+window.onscroll = function(){
+    if(document.documentElement.scrollTop > 20){
+        nav.classList.add('scrolled');
+    }else{
+        nav.classList.remove('scrolled');
+    }
+}
+
+
+</script>
+</body>
+</html>

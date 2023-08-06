@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    overflow-x: hidden;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.header {
+    width: 100%;
+    padding: 15px 0;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.header.scrolled {
+    background-color: blueviolet;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 10px 10px rgba(255, 255, 255, 0.8);
+}
+
+.header .container {
+    width: 1140px;
+    padding: 0 15px;
+    margin: auto;
+
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    font-size: 30px;
+    font-weight: 900;
+    /* color: white; */
+}
+
+.header nav li {
+    display: inline-block;
+    margin-left: 30px;
+}
+
+.header li a {
+    /* color: white; */
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.2s linear;
+}
+
+.header li a:hover {
+    color: gold;
+}
+
+.header .nav-toggler {
+    width: 34px;
+    height: 34px;
+    display: none;
+}
+
+/* /////////////////////////////////////// */
+/* /////////////////////////////////////// */
+/* /////////////////////////////////////// */
+/* /////////////////////////////////////// */
+
+
+@media(max-width:991px) {
+    .header {
+        position: relative;
+    }
+
+    .header nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.3);
+        text-align: center;
+        padding: 0 0 20px;
+        display: none;
+        background-color: blueviolet;
+
+    }
+    .header nav.active {
+display: block;
+    }
+
+    .header ul li {
+        display: block;
+        margin: 0;
+
+    }
+
+    .header ul Li a {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        color: white;
+    }
+
+    .header li a:hover {
+        background-color: blueviolet;
+    }
+
+    .header .nav-toggler {
+        display: flex;
+        background-color: red;
+
+    }
+}
